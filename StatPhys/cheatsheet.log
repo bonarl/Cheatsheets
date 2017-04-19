@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.2.1)  18 APR 2017 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2017.4.18)  19 APR 2017 08:21
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **cheatsheet.tex
 (./cheatsheet.tex
@@ -204,8 +205,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen129
 \l_MT_above_shortintertext_sep=\dimen130
 \l_MT_below_shortintertext_sep=\dimen131
-)
-No file cheatsheet.aux.
+) (./cheatsheet.aux)
 \openout1 = `cheatsheet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -220,6 +220,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -291,13 +292,13 @@ Underfull \vbox (badness 10000) detected at line 116
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./cheatsheet.aux) ) 
 Here is how much of TeX's memory you used:
- 3396 strings out of 493013
- 45030 string characters out of 6139318
- 139044 words of memory out of 5000000
+ 3398 strings out of 493013
+ 45060 string characters out of 6139317
+ 139097 words of memory out of 5000000
  6935 multiletter control sequences out of 15000+600000
  4699 words of font info for 18 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,35p,256b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,16n,35p,256b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1
