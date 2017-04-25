@@ -113,5 +113,49 @@ Cutoff Frequency:
 \[k\Theta_{D} = \hbar \omega_{max}\]
 
 \tabularnewline\hline
+
+\section*{Ideal Gas Perturbations}
+\subsection*{Basics}
+Canonical partition function as integral in 6N-dimensional phase space:
+\[Z_c= \frac{1}{N!h^{3N}} \int \prod_{i} d^{3}q_i d^{3} p_i \exp[-\beta H (\{\vec{q}\},\{\vec{p}\})]\]
+
+\[Z_c = Z_{ideal} Q \textmd{\hspace{0.5cm}where\hspace{0.5cm}} Z_{ideal} = \frac{1}{N!}\left[\frac{V}{\lambda_{T}^3}\right]^N\]
+
+configuration integral:
+
+\[Q = V^{-N}\int \prod_{i=1}^{N} d^3q_i e^{-\beta U(\vec{q_1}...\vec{q_N})}\]
+\noindent\rule{7.8cm}{0.4pt}
+\subsection*{Virial Expansion}
+2-body interactions and central potential:
+\[U(\{\vec{q}\}) = \sum_{i<j} \phi_{ij}\]
+Spatial average configuration integral:
+\[ Q = \frac{1}{V^N} \int \prod_{i} d^3q_i \prod_{i<j}F_{ij} \approx \langle F\rangle^{N(N-1)/2}\]
+
+\[\langle F_{12} \rangle = 1 - \frac{2B_2}{V}\]
+second virial coefficient:
+\[B_2 = -\frac{1}{2} \int d^3r (e^{-\beta \phi(r)}-1)\]
+Equation of State:
+\[ \frac{P}{kT} = \rho + B_2 \rho^2\]
+&
+\subsection*{Reduced Density Distributions}
+Distribution function for any set of m particles occupying stated positions:
+\[\rho_m(\vec{r_1},...,\vec{r_m}) = \frac{N!}{(N-m)!}\int p(\vec{r_1},...,\vec{r_N}) \prod_{i=m+1}^{N} d^3r_i\]
+\[\rho_2(\vec{r_1},\vec{r_2}) = \rho^2g(|\vec{r_1}-\vec{r_2}|)\]
+With radial distribution function $g(r)$
+\[ \int d^3r\rho g(r) = N \textmd{\hspace{1cm}and also\hspace{0.6cm}} \int d^3rg(r) = V\]
+Virial equation of state:
+\[P = \rho kT - \frac{\rho^2}{6} \int_{0}^{\infty} \left( r \frac{d\phi}{dr}\right) g(r) 4\pi r^2 dr\]
+\noindent\rule{7.8cm}{0.4pt}
+\section*{Debye-H\"uckel Theory}
+Poisson's Equation:
+\[\nabla ^2 \phi(r) = -\frac{\rho(r)}{\epsilon}\]
+Debye-H\"uckel equation:
+\[ \nabla^2 \phi - \frac{\phi}{\lambda_{D}^2} = -\frac{q}{\epsilon} \delta(\vec{r})\]
+Debye screening length:
+\[ \lambda_D = \left( \frac{kT\epsilon}{q^2n_{\infty}}\right)^{1/2}\]
+Solution for potential:
+\[ \phi(r) = A\frac{e^{-r/\lambda_D}}{r}\]
+\tabularnewline\hline
+
 \end{longtable}
 \end{document}
