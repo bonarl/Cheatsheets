@@ -3,7 +3,9 @@
 \usepackage{longtable,array,calc}
 \usepackage{xcolor}
 \usepackage{mathtools}
+\usepackage{cancel}
 \usepackage{ amssymb }
+\usepackage{ulem}
 \makeatletter
 \newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
 \newcommand{\Lagr}{\mathcal{L}}
@@ -40,7 +42,7 @@
 \vspace{0.2cm}
 
 \textbf{N2} -  $\underline{\dot{p}} = \underline{F}$
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \textbf{N3} - $\underline{F_{ab}} = - \underline{F_{ba}}$
 
@@ -57,6 +59,8 @@ Orbits (cylindrical polars):
 \[\underline{\dot{r}} = \dot{r} \underline{e_r} + r \dot{\phi} \underline{e_{\phi}}\]
 \[E = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\phi}^2) +V(r)\]
 
+\noindent\rule{7.8cm}{0.4pt}
+
 \section*{Newton to Lagrange}
 Holonomic constraint is an algebraic relation between coordinates:
 \[f(\underline{r_a},\underline{r_b},...,\underline{r_N};t) = 0\]
@@ -72,12 +76,26 @@ for a function $f = f(\{q\},\{\dot{q}\},t)$
 
 \[df = \sum_{j} \frac{\partial f}{\partial q_j} + \sum_{j} \frac {\partial f}{\partial \dot{q_j}} d\dot{q_j} + \frac{\partial f}{\partial t}dt\]
 
+\noindent\rule{7.8cm}{0.4pt}
+
+for a function $f = f(\{q\},\{\cancel{\dot{q}}\},t)$
+
+cancellation of dots
+
+\[ \frac{\partial \dot{f}}{\partial \dot{q}_j} = \frac{\partial f}{\partial q_j}\]
+
+commuting derivatives:
+
+\[\frac{d}{dt}\left(\frac{\partial f}{\partial q_j} \right) = \frac{\partial}{\partial q_j}\left( \frac{df}{dt} \right)\]
+
+\noindent\rule{7.8cm}{0.4pt}
+
 Lagrange's equations (general form):
 
 \[ \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) - \frac{\partial T}{\partial q_j} = Q_j\]
 or
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 \fbox{
 \begin{minipage}{7.4cm}
 
@@ -89,7 +107,20 @@ where $\Lagr(\{q\},\{\dot{q}\}.t) = T(\{q\}.\{\dot{q}\},t) - V(\{q\},t)$
 }
 
 \section*{Calculus of Variations}
+Euler's Equation: for functional of the form
+\[ I[y(s)] = \int_{a}^{b} F(y(s),y'(s),s)ds\]
 
+\[ \frac{\partial F}{\partial y} - \frac{d}{ds} \left( \frac{\partial F}{\partial y'} \right) = 0 \]
+
+with first integrals
+
+\[\frac{\partial F}{\partial y'} = \text{constant} \text{\hspace{1cm} if F does not depend on y}\]
+
+\[y'\frac{\partial F}{\partial y'} - F = \text{constant} \text{\hspace{0.7cm} if F does not depend on s}\]
+&
+
+Hamiltons Principle:
+\[\delta S = 0 \text{\hspace{0.3cm}for the \textit{action} \hspace{0.3cm}} S = \int_{t_1}^{t_2} \Lagr dt \]
 \tabularnewline\hline
 
 \end{longtable}
