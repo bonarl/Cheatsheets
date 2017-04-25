@@ -3,6 +3,8 @@
 /StatPhys/cheatsheet.aux
 /StatPhys/cheatsheet.log
 /StatPhys/cheatsheet.synctex.gz
+/StatPhys/cheatsheet.blg
+/StatPhys/cheatsheet.bbl
 /Quantum/quantum.aux
 /Quantum/quantum.bbl
 /Quantum/quantum.blg
@@ -11,3 +13,4 @@
 /Quantum/quantum.fdb_latexmk
 /Quantum/quantum.fls
 /Quantum/auto/quantum.el
+
