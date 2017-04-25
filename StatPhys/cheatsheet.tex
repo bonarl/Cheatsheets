@@ -155,7 +155,17 @@ Debye screening length:
 \[ \lambda_D = \left( \frac{kT\epsilon}{q^2n_{\infty}}\right)^{1/2}\]
 Solution for potential:
 \[ \phi(r) = A\frac{e^{-r/\lambda_D}}{r}\]
-\tabularnewline\hline
-
+&
+\section*{Ising Model}
+Configurational energy:
+\[ E(\{S_i\}) = -h \sum_{i} S_i - J \sum_{\langle ij\rangle}S_i S_j\]
+Mean field approximation:
+\[\epsilon_{mf} \approx -hS_j - J S_j \sum_{k}^{\pm nn} \langle S_k \rangle = - h_{mf}S_j\]
+\[\textmd{where \hspace{1cm}} h_{mf} = h + Jzm\]
+Spin $\pm$ 1 magnetisation (order paramater):
+\[ m = \tanh(\beta h + \beta Jzm)\]
+Critical Temp:
+\[T_c = \frac{zJ}{k}\]
+\subsection*{Exact Results}
 \end{longtable}
 \end{document}
