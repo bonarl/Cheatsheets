@@ -1,0 +1,96 @@
+\documentclass[table,cmyk]{article}
+\usepackage[a4paper,margin=0.5cm,landscape]{geometry}
+\usepackage{longtable,array,calc}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{ amssymb }
+\makeatletter
+\newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcolumntype{A}[2]
+{
+        >{\begin{minipage}[t]{#2\linewidth-2\tabcolsep-#1\arrayrulewidth}%
+        \vspace{\tabcolsep}}%
+        c%
+        <{\vspace{\tabcolsep}\end{minipage}}%   
+}
+\makeatother
+
+\pagestyle{empty}
+
+\arrayrulewidth=1pt
+\tabcolsep=10pt
+\arrayrulecolor{blue}
+
+
+\begin{document}
+\begin{longtable}
+{
+    |A{1.5}{\ratio{30}{100}}% 30%
+    |A{1}{\ratio{30}{100}}% 30%
+    |A{1.5}{\ratio{30}{100}}% 40%
+    |%
+}\hline
+%Cell 1,1
+\section*{Newtonian Mechanics}
+\fbox{
+\begin{minipage}{7.4cm}
+\textbf{N1} -
+\textit{If no forces act on a body, it remains at rest or moves with constant velocity: $\underline{\dot{v}} = 0$}
+\vspace{0.2cm}
+
+\textbf{N2} -  $\underline{\dot{p}} = \underline{F}$
+\vspace{0.2cm}
+
+\textbf{N3} - $\underline{F_{ab}} = - \underline{F_{ba}}$
+
+\end{minipage}
+}
+\[ \underline{L} \equiv \underline{r} \times \underline{p}\]
+\[ W_{BA} \equiv \int_{A}^{B} \underline{F}\cdot d\underline{r} = T_B - T_A\]
+
+Orbits (cylindrical polars):
+
+\[\underline{e_r} = \cos\phi\underline{i} + \sin\phi\underline{j}
+\]\[
+\underline{e_{\phi}} = -\sin\phi\underline{i} + \cos\phi\underline{j}\]
+\[\underline{\dot{r}} = \dot{r} \underline{e_r} + r \dot{\phi} \underline{e_{\phi}}\]
+\[E = \frac{1}{2}m(\dot{r}^2 + r^2\dot{\phi}^2) +V(r)\]
+
+\section*{Newton to Lagrange}
+Holonomic constraint is an algebraic relation between coordinates:
+\[f(\underline{r_a},\underline{r_b},...,\underline{r_N};t) = 0\]
+For system with £N cartesian cordinates $x_i$, $M$ constraints, and $3N-M$ generalised coordinates $q_i$, and $x_i = x_i(\{q\},t)$
+\newline
+
+Virtual displacement:
+\[\delta x_i = \sum_{i} \frac{\partial x_i}{\partial q_j} \delta q_j + 0\]
+Generalised forces:
+\[Q_j = \sum_{i} F_i \frac{\partial x_i}{\partial q_j}\]
+&
+for a function $f = f(\{q\},\{\dot{q}\},t)$
+
+\[df = \sum_{j} \frac{\partial f}{\partial q_j} + \sum_{j} \frac {\partial f}{\partial \dot{q_j}} d\dot{q_j} + \frac{\partial f}{\partial t}dt\]
+
+Lagrange's equations (general form):
+
+\[ \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) - \frac{\partial T}{\partial q_j} = Q_j\]
+or
+
+\vspace{0.2cm}
+\fbox{
+\begin{minipage}{7.4cm}
+
+\[\frac{d}{dt} \left( \frac{\partial \Lagr}{\partial q_j} \right) - \frac{\partial \Lagr}{\partial q_j} = 0\]
+
+where $\Lagr(\{q\},\{\dot{q}\}.t) = T(\{q\}.\{\dot{q}\},t) - V(\{q\},t)$
+\end{minipage}
+
+}
+
+\section*{Calculus of Variations}
+
+\tabularnewline\hline
+
+\end{longtable}
+\end{document}
