@@ -90,6 +90,7 @@ l = 0,1,2,3... n
 \[m_{s} = s, s-1, ..., -s\]
 \[m_s \textmd{ degeneracy} = (2s+1)\]
 \[ j = l+s, l+s-1, ..., |l-s+1|, |l-s|\]
+Russel Saunders notation labels terms $n^{(2s+1)}l_j$
 \vspace{0.1cm}
 
 \end{minipage}
@@ -104,13 +105,32 @@ Matrix Elements:
 
 &
 \section*{Perturbation Theory}
+Non Degenerate (Time independent):
 \[E_n^{(1)} = \braket{n^{(0)}|\hat{H'}|n^{(0)}} \equiv H_{nn}'\]
 
 \[ \ket{n^{(1)}} = \sum_{k\ne n} \frac{H_{kn}'}{(E_n^{(0)}-E_k^{(0)})}\ket{k^{(0)}}\]
 
 \[E_n^{(2)} = \sum_{m\ne n} \frac{|H_{mn}'|^2}{(E_n^{(0)}-E_m^{(0)})}\]
 
+Degenerate:
+\[ \sum_{n=1}^{g} (H'_{kn} - E^{(1)}\delta_{kn})b_n=0, \text{\hspace{1cm}} k = 1,....,g\]
 
+\[\det(H'_{kn} - E^{(1)}\delta_{kn}) = 0\]
+
+\noindent\rule{7.8cm}{0.4pt}
+
+\section*{Atoms}
+
+
+General multi-electron Hamiltonian:
+\[\hat{H} = \sum_{i=1}^{N} \Big\{ \frac{\hat{p}_i^2}{2m}-\frac{Ze^2}{(4\pi\epsilon_0)r_i}\Big\} + \sum_{i>j=1}^{N} \frac{e^2}{(4\pi\epsilon_0)r_{ij}}\]
+Hydrogen fine structure:
+\[\Delta_{nj} = E^{(0)}_n \frac{(Z\alpha)^2}{n^2}\left( \frac{n}{j+\tfrac{1}{2}}-\frac{3}{4}\right)\]
+2-Electron wavefunctions:
+\[\chi_{1,1} = \alpha_1\alpha_2\]
+\[\chi_{1,0} = \tfrac{1}{\sqrt{2}}\{\alpha_1\beta_2+\beta_1\alpha_2\}\]
+\[\chi_{1,-1} = \beta_1\beta_2\]
+\[\chi_{0,0} = \tfrac{1}{\sqrt{2}}\{\alpha_1\beta_2-\beta_1\alpha_2\}\]
 
 
 \tabularnewline\hline
