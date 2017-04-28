@@ -1,0 +1,73 @@
+\documentclass[table,cmyk]{article}
+\usepackage[a4paper,margin=0.5cm,portrait]{geometry}
+\usepackage{longtable,array,calc}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{braket}
+\makeatletter
+\newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
+\newcolumntype{A}[2]
+{
+        >{\begin{minipage}[t]{#2\linewidth-2\tabcolsep-#1\arrayrulewidth}%
+        \vspace{\tabcolsep}}%
+        c%
+        <{\vspace{\tabcolsep}\end{minipage}}%   
+}
+\makeatother
+
+\pagestyle{empty}
+
+\arrayrulewidth=1pt
+\tabcolsep=10pt
+\arrayrulecolor{blue}
+
+
+\begin{document}
+\begin{longtable}
+{
+    |A{1.5}{\ratio{50}{100}}% 30%
+    |A{1}{\ratio{50}{100}}% 30%
+    |%
+}\hline
+\section*{Ising Model}
+Configurational energy or Hamiltonian for array of spins
+\[E(\{S_i\}) = -h\sum_{i} S_i - J\sum_{<ij>}S_i S_j\]
+$<>$ is the sum over nearest neighbours. There are $z$ nearest neighbours per site, and $\frac{Nz}{2}$ nearest neighbours total for N spin sites
+
+\section{Mean Field Approximation}
+energy contributions with $S_j$ only is 
+\[\epsilon(S_j) = -hS_j - JS_j\sum_{k}^{\pm nn}S_k\]
+then replace every $S_k$ with their \textit{mean} values
+\[\epsilon_{mf}(S_j) \approx -hS_j - JS_j\sum_{k}^{\pm nn} \langle S_k\rangle\]
+m is the magnetisation order parameter and = the mean spin
+\[\epsilon_{mf}(S_j) = -(h+Jzm)S_j = -h_{mf}S_j\]
+which gives single spin Boltzmann distribution
+\[p(S_j) = \frac{e^{-\beta\epsilon_{mf}(S_i)}}{\sum_{S_j = \pm 1} e^{-\beta\epsilon_{mf}(S_j)}}=\frac{e^{\beta h_{mf}S_j}}{e^{\beta h_{mf}}+e^{-\beta h_{mf}}}\]
+\section{Consistency Condition}
+although $m$ is the average spin, it must be recovered by using the derived probability distribution, which gives the \textit{mean field equation}
+\[ m = \sum_{S_j = \pm 1}p(S_j)S_j =  \frac{e^{-\beta\epsilon_{mf}} - e^{\beta h_{mf}}}{{e^{\beta h_{mf}}+e^{-\beta h_{mf}}}}=\tanh({\beta h+\beta Jzm})\]
+for $h = 0$, and using $\tanh(x) \approx x - \frac{x^3}{3}$ for small $x$
+\[ m = \beta Jzm + \mathcal{O}(m^3)\]
+solutions with $|m| > 0$ appear when the gradient of the tanh function at the origin is greater than $1$, which gives critical temperature
+\[ T_c = \frac{zJ}{k}\]
+for $T>T_c$ only have $m=0$, while for $T<T_c$ have ferromagnetic phase with $\pm|m|$
+\section*{Critical Behaviour: $T\approx T_c$ and $h=0$}
+\[m=\tanh\left(m\frac{T_c}{T}\right) \approx m\frac{T_c}{T} - \frac{m^3}{3}\left(\frac{T_c}{T}\right)^3\]
+implies $m=0$ or
+\[ m^2 = 3\left(\frac{T}{T_c}\right)^3\left(\frac{T_c}{T}-1\right)\]
+&
+define $t = \frac{T-T_c}{T_c}$
+\[m^2 = 3(1+t)^3\left(\frac{1}{1+t} - 1\right) \sim -3t\]
+
+for $h\ne 0$ expand to first order in h
+\[m=m\frac{T_c}{T} + \beta h - \frac{m^3}{3}\left(\frac{T_c}{T}\right)^3\]
+susceptibility $\chi$ is found by taking derivative w.r.t $h$
+\[\chi = \chi\frac{T_c}{T} + \beta - \chi m^2\left(\frac{T_c}{T}\right)^3\]
+which gives the critical behaviour
+\[\chi \sim \frac{\beta_c}{t} \text{\hspace{0.5cm} for } T>T_c\]
+\[\chi \sim \frac{\beta_c}{2|t|} \text{\hspace{0.5cm} for } T<T_c\]
+
+\tabularnewline\hline
+
+\end{longtable}
+\end{document}
