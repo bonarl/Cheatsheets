@@ -1,0 +1,96 @@
+\documentclass[table,cmyk]{article}
+\usepackage[a4paper,margin=0.5cm,portrait]{geometry}
+\usepackage{longtable,array,calc}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{braket}
+\makeatletter
+\newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
+\newcolumntype{A}[2]
+{
+        >{\begin{minipage}[t]{#2\linewidth-2\tabcolsep-#1\arrayrulewidth}%
+        \vspace{\tabcolsep}}%
+        c%
+        <{\vspace{\tabcolsep}\end{minipage}}%   
+}
+\makeatother
+
+\pagestyle{empty}
+
+\arrayrulewidth=1pt
+\tabcolsep=10pt
+\arrayrulecolor{blue}
+
+
+\begin{document}
+\begin{longtable}
+{
+    |A{1.5}{\ratio{50}{100}}% 30%
+    |A{1}{\ratio{50}{100}}% 30%
+    |%
+}\hline
+\section*{Perturbations about the Ideal Gas}
+Classical Hamiltonian is
+\[H = \sum_{i} \frac{\vec{p_i}^2}{2m}+U(\{\vec{q}\})\]
+for the set conjugate coordinates of momentum, $\vec{p_i}$ and position $\vec{q_i}$ vectors for particle $i$.
+Classical partition function would be
+\[Z_c = \frac{1}{N!}\sum_{cells} e^{-\beta H}\]
+for cells of volume $h^3$ in the 6N dimensional phase space. For small cells this can be replaced with an integral
+\[\sum_{cells} \rightarrow \frac{1}{h^3}\int dq_xdq_ydq_z\int dp_xdp_ydp_z\]
+and so the partition function becomes
+\[Z_c(T,V,N) = \frac{1}{N!h^{3N}}\int \prod_{i} d^3q_id^3p_ie^{-\beta H(\{\vec{q}\},\{\vec{p_i}\})}\]
+\subsection*{Ideal Gas}
+For the ideal gas, $U = 0$ and s the partition function is given by
+\[Z_{ideal} = \frac{V^N}{N!h^{3N}}\prod_{i}\left[ \int d^3p_ie^{-\beta p_i^2/2m}\right] \]
+\[= \frac{V^N}{N!h^{3N}}\left[ dp e^{-\beta p^2/2m}\right]^{3N}\]
+\[= \frac{V^N}{N!h^{3N}} \left[ \left(\frac{2m\pi }{\beta}\right)^{1/2}\right]^{3N}\]
+\[=\frac{1}{N!}\left[ \frac{V}{\lambda_T^3}\right]^N\]
+from which expressions for pressure, entropy etc can be found using the bridge equation.
+\subsection*{Configurational Integral}
+In the interacting case with interaction potential $U(\vec{q_1},...,\vec{q_N})$
+the total partition function becomes
+\[Z_c = \frac{1}{N!h^{3N}} \prod_{i} \int d^3p_i e^{-\beta\sum p_i^2/2m}\int \prod_{i} d^3q_i e^{-\beta U(\{\vec{q}\})}\]
+which is written as follows, for the configurational integral Q
+\[Z_c(T,V,N) = Z_{ideal}Q\]
+with
+\[Q = \frac{1}{V^N} \int \prod_{i=1}^{N}d^3q_i e^{-\beta U(\vec{q_1},...,\vec{q_N})}\]
+\vspace{2cm}
+
+\noindent\rule{9cm}{0.4pt}
+&
+\section*{Virial Expansion}
+Assuming 2-body interactions, and a central potential between particles, the interaction potential can be written
+\[U(\{\vec{q}\})= \sum_{i<j} \phi_{ij}\]
+configurational integral is given by
+\[Q = \frac{1}{V^N}\int\prod_i d^3q_i \prod_{i<j} F_{ij}, \text{\hspace{1cm}where \hspace{0.2cm}} F_{ij} = e^{-\beta\phi_{ij}}\]
+which can be interpreted as a spatial average, and approximated by replacing the average of the product by the product of the averages 
+\[Q = \langle \prod_{i<j}F_{ij}\rangle \approx \prod_{i<j} \langle F_{ij}\rangle
+= \langle F \rangle ^{N(N-1)/2}\]
+since there are $N$ choose $2$ interaction forces to consider. Make the replacement $F_{ij} = 1+ f_{ij}$ and take $i,j = 1,2$
+\[\langle F \rangle \equiv \langle F_{12} \rangle = 1 + \frac{1}{V^N} \int \prod_{i}d^3q_if_{12}
+= 1+\frac{1}{V^2}\int d^3q_1d^3q_2f_{12}\]
+Change to centre of mass coordinates
+\[\vec{r} = \vec{q_1} - \vec{q_2}, \hspace{1cm} \vec{R} = \frac{1}{2}(\vec{q_1}+\vec{q_2})\]
+the Jacobian is given by (component wise)
+\[
+\begin{vmatrix}
+\frac{\partial r_k}{\partial q_{1k}} \frac{\partial r_k}{\partial q_{2k}}\\\\
+\frac{\partial R_k}{\partial q_{1k}} \frac{\partial R_k}{\partial q_{2k}}
+\end{vmatrix} = 1 \text{\hspace{1cm}so\hspace{1cm}} d^3q_1d^3q_2 = d^3rd^3R
+\]
+and there is no dependence on $\vec{R}$ so
+\[ \langle F_{12}\rangle = 1+\frac{1}{V} \int d^3r [ e^{-\beta \phi(r)}-1]\]
+which gives for the configurational integral
+\[Q = \left(1-\frac{2B_2}{V}\right) ^{N(N-1)/2}\]
+with the second virial coefficient
+\[B_2 = -\frac{1}{2}\int d^3r[e^{-\beta\phi(r)}-1]\]
+and again thermodynamic quantities can be found using bridge equation
+\[F=F_{ideal}-kT\ln{Q} \approx F_{ideal} + \frac{N^2kT}{V}B_2\]
+and equation of state
+\[ \frac{P}{kT} = \rho + B_2\rho^2\]
+which is equivalent to van der Waals equation of state
+\[(P+\rho^2 a_0) = \frac{NkT}{V-Nb_0}\]
+\tabularnewline\hline
+
+\end{longtable}
+\end{document}
