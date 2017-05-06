@@ -63,13 +63,13 @@ Braket $\leftrightarrow$ Function notation
 
 
 
-&
+
 \section*{Angular Momentum \& Spin}
 Angular Momentum Operators:
 \[
 \hat{L^2}\ket{l,m} = l(l+1)\hbar^2\ket{l,m}
 \]
-
+&
 \[\hat{L^2_z} \ket{l,m} = m\hbar\ket{l,m}\]
 
 Spherical Polars:
@@ -111,13 +111,15 @@ uncoupled basis $\ket{l, s, j, m_j}$}
 Matrix Elements:
 \[\braket{s,m'|\hat{S_z}|s,m} = m\hbar \delta_{m',m}\]
 \[\braket{s,m'|\hat{S_{\pm}}|s,m} = \sqrt{s(s+1)-m(m\pm1)} \hbar \delta_{m',m\pm1}\]
-
+\subsection*{Variational Method}
+\[\langle E\rangle = \frac{\braket{\psi|H|\psi}}{\braket{\psi|psi}} = \frac{\sum_{n }|c_n|^2E_n}{\sum_{n }|c_n|^2} \ge E_1\]
 &
 \section*{Atoms}
 
 
 General multi-electron Hamiltonian:
 \[\hat{H} = \sum_{i=1}^{N} \Big\{ \frac{\hat{p}_i^2}{2m}-\frac{Ze^2}{(4\pi\epsilon_0)r_i}\Big\} + \sum_{i>j=1}^{N} \frac{e^2}{(4\pi\epsilon_0)r_{ij}}\]
+
 Hydrogen fine structure:
 \[\Delta_{nj} = E^{(0)}_n \frac{(Z\alpha)^2}{n^2}\left( \frac{n}{j+\tfrac{1}{2}}-\frac{3}{4}\right)\]
 2-Electron wavefunctions:
@@ -125,6 +127,7 @@ Hydrogen fine structure:
 \[\chi_{1,0} = \tfrac{1}{\sqrt{2}}\{\alpha_1\beta_2+\beta_1\alpha_2\}\]
 \[\chi_{1,-1} = \beta_1\beta_2\]
 \[\chi_{0,0} = \tfrac{1}{\sqrt{2}}\{\alpha_1\beta_2-\beta_1\alpha_2\}\]
+\noindent\rule{7.8cm}{0.4pt}
 
 \section*{Scattering}
 Born Approximation
@@ -183,7 +186,18 @@ $\bullet$ Integrate differential equation for $\dot{c_m}^{(1)}$
 $\bullet$ when system is known to initially be in eigenstate k at $t=0$ get transition probability
 
 \[p_{mk}(t) \approx \left|c_m^{(1)}(t)\right|^2 = \frac{1}{\hbar^2}\left|\int_{t_0}^{t}H_{mk}'e^{i\omega_{mn}t'}dt'\right|^2\]
+\subsection*{Time-Independent Perturbations in Time-Dependent Perturbation Theory}
 
+\[p_{mk} = \frac{2|H_{mk}'|^2}{\hbar^2} f(t,\omega_{mk})\]
+
+where \[f(t,\omega_{mk}) = \frac{2sin^2(\omega_{mk}t/2)}{\omega_{mk}^2}\]
+
+for constant perturbation, take integral between energy range of transition probability (with energy density) to obtain Fermi's Golden Rule:
+
+\[R = \frac{2\pi}{\hbar} |H_{mk}'|^2 \rho(E)\]
+
+which is transitions per unit time
+&
 \tabularnewline\hline
 
 
