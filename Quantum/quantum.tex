@@ -113,21 +113,6 @@ Matrix Elements:
 \[\braket{s,m'|\hat{S_{\pm}}|s,m} = \sqrt{s(s+1)-m(m\pm1)} \hbar \delta_{m',m\pm1}\]
 
 &
-\section*{Perturbation Theory}
-Non Degenerate (Time independent):
-\[E_n^{(1)} = \braket{n^{(0)}|\hat{H'}|n^{(0)}} \equiv H_{nn}'\]
-
-\[ \ket{n^{(1)}} = \sum_{k\ne n} \frac{H_{kn}'}{(E_n^{(0)}-E_k^{(0)})}\ket{k^{(0)}}\]
-
-\[E_n^{(2)} = \sum_{m\ne n} \frac{|H_{mn}'|^2}{(E_n^{(0)}-E_m^{(0)})}\]
-
-Degenerate:
-\[ \sum_{n=1}^{g} (H'_{kn} - E^{(1)}\delta_{kn})b_n=0, \text{\hspace{1cm}} k = 1,....,g\]
-
-\[\det(H'_{kn} - E^{(1)}\delta_{kn}) = 0\]
-
-\noindent\rule{7.8cm}{0.4pt}
-
 \section*{Atoms}
 
 
@@ -141,8 +126,67 @@ Hydrogen fine structure:
 \[\chi_{1,-1} = \beta_1\beta_2\]
 \[\chi_{0,0} = \tfrac{1}{\sqrt{2}}\{\alpha_1\beta_2-\beta_1\alpha_2\}\]
 
+\section*{Scattering}
+Born Approximation
+\[\frac{d \sigma}{d \Omega} =\frac{m^2}{4\pi^2\hbar^2}L^6|\braket{\vec{k'}|\hat{V}|\vec{k}}|^2\]
+where matrix element $V_{\vec{k'}\vec{k}}$ is given by
+\[\braket{\vec{k'}|\hat{V}|\vec{k}} = \frac{1}{L^3}\int V(\vec{r})\exp{(-i\vec{q}\cdot \vec{r})}d^3r\]
+for central potentials, Born Approximation becomes
+\[\frac{d\sigma}{d\omega} = \frac{4m^2}{\hbar^4K^2}\left|\int_{0}^{\infty} rV(r)sin(Kr)dr\right|^2\]
+where $K$ is the wave-vector transfer, $K = 2ksin\frac{\theta}{2}$
+\tabularnewline\hline
+\section*{\underline{Perturbation Theory}}
+
+\subsection*{Time-Independent Non-Degenerate:}
+
+$\bullet$ let $H = H_o + \lambda H'$
+
+$\bullet$ expand $E_n$ and $\ket{n}$ in orders of lambda
+
+$\bullet$ compare $\lambda$'s
+
+$\bullet$ act with arbitrary vector $\ket{k}$
+
+\[E_n^{(1)} = \braket{n^{(0)}|\hat{H'}|n^{(0)}} \equiv H_{nn}'\]
+
+\[ \ket{n^{(1)}} = \sum_{k\ne n} \frac{H_{kn}'}{(E_n^{(0)}-E_k^{(0)})}\ket{k^{(0)}}\]
+
+\[E_n^{(2)} = \sum_{m\ne n} \frac{|H_{mn}'|^2}{(E_n^{(0)}-E_m^{(0)})}\]
+
+\subsection*{Degeneracy}
+
+$\bullet$ linear superposition of the $g$ degenerate substates is also an eigenstate with the same eigenvalue as substates, i.e
+\[\ket{E^{(0)}} = \sum_{n=1}^{g} b_n\ket{E_n^{(0)}}\]
+$\bullet$ same procedure as Time-Independent, then take $k \le g$ for the arbitrary state, leads to $g\times g$ matrix which must have $0$ determinant for non-zero solutions
+\[ \sum_{n=1}^{g} (H'_{kn} - E^{(1)}\delta_{kn})b_n=0, \text{\hspace{1cm}} k = 1,....,g\]
+
+\[\det(H'_{kn} - E^{(1)}\delta_{kn}) = 0\]
+
+\subsection*{Time-Dependent}
+General solution to TDSE
+\[\ket{\psi, t} = \sum_{n } c_n^{(0)} e^{-E_n^{(0)}t/\hbar}\ket{n^{(0)}}\]
+&
+\[i\hbar\frac{\partial}{\partial t}\ket{\psi, t} = H_o \ket{\psi, t}\]
+
+$\bullet$ time-dependent perturbation implies $c_n$ coefficients are time-dependent
+
+$\bullet$ sub general solution into TDSE and take scalar product with general state $\bra{m^{(0)}}$ to obtain differential equation for coefficients
+
+\[\dot{c_m} = (i\hbar)^{-1}\sum_{n }H_{mn}'e^{i\omega_{mn}t}\]
+
+$\bullet$ Expand coefficients and Hamiltonian with $\lambda$ as before, compare orders of $\lambda$
+
+$\bullet$ Integrate differential equation for $\dot{c_m}^{(1)}$
+
+\[c_m^{(1)}(t) = c_m^{(1)}(t_0) + (i\hbar)^{-1}\sum_{n } \int_{t_0}^{t} H_{mn}'e^{i\omega_{mn}t'}dt'\]
+
+$\bullet$ when system is known to initially be in eigenstate k at $t=0$ get transition probability
+
+\[p_{mk}(t) \approx \left|c_m^{(1)}(t)\right|^2 = \frac{1}{\hbar^2}\left|\int_{t_0}^{t}H_{mk}'e^{i\omega_{mn}t'}dt'\right|^2\]
 
 \tabularnewline\hline
+
+
 
 \end{longtable}
 \end{document}
