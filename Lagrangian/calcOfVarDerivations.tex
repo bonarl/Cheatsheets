@@ -30,7 +30,36 @@
     |%
 }\hline
 \section*{Functional Minimisation}
-  Can derive lagrange's equations from minimising the functional, $F[y]$.
+  Can derive lagrange's equations from minimising the functional:
+  \begin{displaymath}
+   J[y]=\int_a^bF(\{y(x)\}, \{\dot y(x)\}, x)dx
+  \end{displaymath}
+  Let $y(x)\rightarrow y(x)+\epsilon\eta(x)$, $\dot y(x)\rightarrow \dot y(x) +
+  \epsilon \dot \eta(x)$ with $\eta(a)=\eta(b)=0$
+
+  $F$ is at a minimum with $\epsilon=0$, we therefore have:
+  \begin{displaymath}
+   \left \frac{dJ}{d\epsilon} \right |_{\epsilon=0}=0
+  \end{displaymath}
+  \begin{displaymath}
+   \frac{dJ}{d\epsilon}=\int_a^b\frac{dF}{d\epsilon} dx=\int_a^b\left(
+     \frac{\partial F}{\partial y}\frac{dy}{d\epsilon}+\frac{\partial
+       F}{\partial \dot y}\frac{d\dot y}{d\epsilon} \right)dx
+  \end{displaymath}
+  Using:
+  \begin{displaymath}
+    \frac{dy}{d\epsilon}=\eta, \frac{d\dot y}{d\epsilon}=\dot\eta
+  \end{displaymath}
+  We have:
+  \begin{displaymath}
+    0=\int_a^b\left( \frac{\partial F}{\partial y}\eta + \frac{\partial
+        F}{\partial \dot y}\dot \eta \right)dx
+  \end{displaymath}
+  Using integration by parts wrt. $x$ on $\frac{\partial F}{\partial \dot y}\dot
+  \eta$ we get:
+  \begin{displaymath}
+   0 = \int_a^b 
+  \end{displaymath}
   &
 \section*{Beltrami Identity}
 \tabularnewline\hline
