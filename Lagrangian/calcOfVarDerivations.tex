@@ -89,10 +89,42 @@
      \dot y \frac{\partial F}{\partial y}=\dot y \frac{d}{dx}\frac{\partial
        F}{\partial \dot y} 
     \end{displaymath}
-    Expand the derivative wrt. x:
+    Take the derivative of $F$ wrt. $x$ for subbing in:
     \begin{displaymath}
-      
+     \frac{d F}{d x}  = \frac{\partial F}{\partial y}\dot y + \frac{\partial
+       F}{\partial \dot y}\ddot y + \frac{\partial F}{\partial x}
     \end{displaymath}
+    Rearrange:
+    \begin{displaymath}
+     \dot y \frac{\partial F}{\partial y}=\frac{dF}{dx}-\frac{\partial
+       F}{\partial \dot y}\ddot y - \frac{\partial F}{\partial x} 
+    \end{displaymath}
+    Sub this in to the left half of the second equation:
+    \begin{displaymath}
+\frac{dF}{dx}-\frac{\partial
+       F}{\partial \dot y}\ddot y - \frac{\partial F}{\partial x} = \dot y
+     \frac{d}{dx}\frac{\partial F}{\partial \dot y}
+    \end{displaymath}
+    The term on the right hand side can be given by:
+    \begin{displaymath}
+      \dot y \frac{d}{dx}\frac{\partial F}{\partial \dot y} = \frac{d}{dx}\left(
+        \dot y \frac{\partial F}{\partial \dot y} \right) - \frac{\partial
+        F}{\partial \dot y} \ddot y
+    \end{displaymath}
+    Subbing this in gives:
+    \begin{displaymath}
+      \frac{dF}{dx}-\frac{\partial F}{\partial x}= \frac{d}{dx}\left( \dot y
+        \frac{\partial F}{\partial \dot y} \right)
+    \end{displaymath}
+    Since $\frac{\partial F}{\partial x}=0$, we get:
+    \begin{displaymath}
+     \frac{dF}{dx}-\frac{d}{dx}\left( \dot y \frac{\partial F}{\partial \dot y} \right) =0
+    \end{displaymath}
+    Which can be integrated to give:
+    \begin{displaymath}
+     F-\dot y \left (\frac{\partial F}{\partial \dot y} \right ) = C
+    \end{displaymath}
+    Where $C$ is a constant.
 \tabularnewline\hline
 
 \end{longtable}
