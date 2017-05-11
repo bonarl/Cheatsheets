@@ -30,7 +30,7 @@
     |%
 }\hline
 \section*{Functional Minimisation}
-  Can derive lagrange's equations from minimising the functional:
+  Can derive Lagrange's equation from minimising the functional:
   \begin{displaymath}
    J[y]=\int_a^bF(\{y(x)\}, \{\dot y(x)\}, x)dx
   \end{displaymath}
@@ -58,8 +58,22 @@
   Using integration by parts wrt. $x$ on $\frac{\partial F}{\partial \dot y}\dot
   \eta$ we get:
   \begin{displaymath}
-   0 = \int_a^b 
+   0 = \int_a^b \left( \frac{\partial F}{\partial y}\eta -
+     \eta\frac{d}{dx}\frac{\partial F}{\partial \dot y}  \right) dx + \left[
+     \frac{\partial F}{\partial \dot y}\eta \right]_a^b
   \end{displaymath}
+  Which becomes (using $\eta(a)=\eta(b)=0$)
+  \begin{displaymath}
+   0 = \int_a^b\eta \left( \frac{\partial F}{\partial y} -
+     \frac{d}{dx}\frac{\partial F}{\partial \dot y} \right) dx
+  \end{displaymath}
+  With $\eta$ being any general small displacement, only having requirements at
+  points $a, b$ this means
+  \begin{displaymath}
+   \frac{\partial F}{\partial y}-\frac{d}{dx}\frac{\partial F}{\partial \dot y}
+   = 0 
+  \end{displaymath}
+  Which is Lagrange's equation.
   &
 \section*{Beltrami Identity}
 \tabularnewline\hline
