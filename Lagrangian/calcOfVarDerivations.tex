@@ -1,0 +1,39 @@
+\documentclass[table,cmyk]{article}
+\usepackage[a4paper,margin=0.5cm,portrait]{geometry}
+\usepackage{longtable,array,calc}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{braket}
+\makeatletter
+\newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
+\newcolumntype{A}[2]
+{
+        >{\begin{minipage}[t]{#2\linewidth-2\tabcolsep-#1\arrayrulewidth}%
+        \vspace{\tabcolsep}}%
+        c%
+        <{\vspace{\tabcolsep}\end{minipage}}%   
+}
+\makeatother
+
+\pagestyle{empty}
+
+\arrayrulewidth=1pt
+\tabcolsep=10pt
+\arrayrulecolor{blue}
+
+
+\begin{document}
+\begin{longtable}
+{
+    |A{1.5}{\ratio{50}{100}}% 30%
+    |A{1}{\ratio{50}{100}}% 30%
+    |%
+}\hline
+\section*{Functional Minimisation}
+  Can derive lagrange's equations from minimising the functional, $F[y]$.
+  &
+\section*{Beltrami Identity}
+\tabularnewline\hline
+
+\end{longtable}
+\end{document}
