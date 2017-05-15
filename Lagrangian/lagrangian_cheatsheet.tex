@@ -74,7 +74,7 @@ Generalised forces:
 &
 for a function $f = f(\{q\},\{\dot{q}\},t)$
 
-\[df = \sum_{j} \frac{\partial f}{\partial q_j} + \sum_{j} \frac {\partial f}{\partial \dot{q_j}} d\dot{q_j} + \frac{\partial f}{\partial t}dt\]
+\[df = \sum_{j} \frac{\partial f}{\partial q_j}dq_j + \sum_{j} \frac {\partial f}{\partial \dot{q_j}} d\dot{q_j} + \frac{\partial f}{\partial t}dt\]
 
 \noindent\rule{7.8cm}{0.4pt}
 
@@ -127,12 +127,18 @@ Hamilton's Principle:
   \begin{displaymath}
     h=\sum_i\frac{\partial L}{\partial \dot q_i}\dot q_i-L=\sum_ip_i\dot q_i-L
   \end{displaymath}
+  time translational symmetry of the Lagrangian $\implies$ conservation of h
+  
+  
   $h$ and $L$ are the legendre transforms of each other on the variables $p_i$
   and $\dot q_i$:
   \begin{displaymath}
     p_i=\frac{\partial L}{\partial \dot q_i}, \dot q_i = \frac{\partial
       h}{\partial p_i}
   \end{displaymath}
+  
+The Hamiltonian $H$ is numerically equal to energy function, but is a function of canonical momenta instead of $\dot{q}$
+\[ \dot{q_i} = \frac{\partial H}{\partial p_i}, \hspace{1cm} \dot{p_i} = -\frac{\partial H}{\partial q_i}, \hspace{1cm} -\frac{\partial L}{\partial t} = \frac{\partial H}{\partial }\]
   \subsection*{Relativistic Particle}
   The lagrangian for a free relativistic particle can be found by minimising the
   action $S$, then requiring $\frac{\partial L}{\partial \dot q_i}=\gamma m \dot
@@ -142,22 +148,57 @@ Hamilton's Principle:
    \int_{\tau_1}^{\tau_2}\epsilon d\tau=\epsilon\int_{t_1}^{t_2}\frac{1}{dt/d\tau}dt
     =\epsilon\int_{t_1}^{t_2}\frac{dt}{\gamma(\dot q)}
   \end{displaymath}
+    \tabularnewline\hline
   Finding $\epsilon$ from relativistic momentum:
   \begin{displaymath}
     p_i=\gamma m \dot q_i=\frac{\partial L}{\partial \dot
       q_i}=-\frac{\epsilon\gamma\dot q_i}{c^2}
   \end{displaymath}
+
   And we have $\epsilon = -mc^2$, so the lagrangian is:
   \begin{displaymath}
    L=-\frac{mc^2}{\gamma} 
   \end{displaymath}
-\tabularnewline\hline
-\section*{Lagrangian of Rotation}
+Poisson Brackets
+\[\{ A, B \}_{PB} = \sum_{i} \left[ \frac{\partial A}{\partial q_i} \frac{\partial B}{\partial p_i} - \frac{\partial A}{\partial p_i}\frac{\partial B}{\partial q_i}\right]\]
+\section*{Rotating Rigid Bodies}
+For system of N particles, with constraints such that distance between each pair of particles is fixed
+\[ \dot{\vec{L}} = \vec{G}^{ext}\]
+\[ \vec{L} = \vec{J} + \vec{R} \times \vec{P}\]
+
+Eulers theorem states \textit{Any displacement of a rigid body with one point fixed in space can be described as a rotation about some single axis}
+
+Principle axes are described by the three mutually perpendicular eigenvectors of the Inertia tensor
+
+Euler's Equations of Motion are
+\[
+G_1 = I_1 \dot{\omega_1} + (I_1 - I_2)\omega_2 \omega_3\]
+\[G_2 = I_2 \dot{\omega_2} + (I_1 - I_3)\omega_3 \omega_1\]
+\[G_3 = I_3 \dot{\omega_3} + (I_2 - I_1)\omega_1 \omega_2 \]
+
   The lagrangian for a rotating symmetric top is given by:
   \begin{displaymath}
    \mathcal{L}
    =\frac{1}{2}[A(\dot\theta^2+\dot\phi^2\sin^2\theta)+C(\dot\phi\cos\theta + \dot\psi)^2]-Mgl\cos\theta
   \end{displaymath}
+ 
   With $A=I_1=I_2$ and $C=I_3$. This won't need to be derived in an exam - it'll be given or will need to be quoted.
+
+ &
+  Conservation Laws 
+  
+  \[ p_{\psi} \equiv \frac{\partial L}{\partial \dot{\psi}} = C(\dot{\psi} + \dot{\phi}\cos \theta) = I_3 \omega_3\]
+  
+  "spin" of top is defined as
+  \[n\equiv \omega_3 = (\dot{\psi} + \dot{\phi}\cos\theta)\] 
+  \[p_{\phi}  = A\dot{\phi}\sin^2 \theta + Cn \cos \theta = L_z\]
+  \[ p_{\theta} = A \dot{\theta} \hspace{1cm} and \dot{p_{\theta}} = \frac{\partial L}{\partial \theta}\]
+  leads to equation of motion for $\theta$
+  
+  Lagrangian does not depend on time implies energy function is conserved, and $T$ is kinetic in velocities so h is the same as $T+V$
+
+  &
+  
+
 \end{longtable}
 \end{document}
