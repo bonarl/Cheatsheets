@@ -129,18 +129,34 @@ and use trig identity to get $\theta$ from $E$
 This must be solved iteratively, start with guess $E_0 = M$, then find correction
 \[\Delta E = \frac{M-E_0+e\sin E_0}{1-e\cos E_0}\]
 Then repeat, using $E_i = E_{i-1}+\Delta E_{i-1}$ until $\Delta E_i \approx 0$
-&
+
 \subsection*{Position and Velocity from Orbital Elements}
 From orbit equation
 \[\dot{r} = \frac{a(1-e^2)}{(1+e\cos \theta)^2} e\sin \theta \dot{\theta} = r\frac{e\sin \theta}{1+e\cos \theta} \dot{\theta}\]
 Flight path angle
 \[\tan \gamma = \frac{v_r}{v_\theta}=\frac{\dot{r}}{r\dot{\theta}}=\frac{e\sin \theta}{1+e \cos \theta}\]
+&
 To get in plane position and velocity at time $t$, solve Kepler's equation for $\tau$ time of passage from pericentre, then compute orbit radius and thus cartesian positions.
 \[x = r\cos \theta \text{\hspace{1cm}and\hspace{1cm}} y = r\sin \theta\]
 Velocity components:
 \[v_r = \frac{r^2e\sin \theta}{p}\dot{\theta}\text{\hspace{1cm}and\hspace{1cm}}v_\theta = \frac{l}{r} = r\dot{\theta}\]
 Gives cartesian velocities:
 \[\dot{x} = -\sqrt{\frac{\mu}{p}}\sin \theta \text{\hspace{1cm}and\hspace{1cm}}\dot{y} = \sqrt{\frac{\mu}{p}}(e+\cos \theta)\]
+\noindent\rule{9cm}{0.4pt}
+\section*{Orbit Transfers}
+\subsection*{Hohmann Transfer}
+Minimum energy transfer between two circular, coplanar orbits is an ellipse with semimajor axis $a = \frac{1}{2}r_1 + r_2$. The change in velocities required are the difference between the velocities of the transfer ellipse at pericentre and apocentre, and the velocities of the circular orbits at $r_1$ and $r_2$
+\[\Delta v_1 = \sqrt{\frac{2\mu}{r_1}-\frac{2\mu}{r_1+r_2}}-\sqrt{\frac{\mu}{r_1}}\]
+\[\Delta v_2 = \sqrt{\frac{\mu}{r_2}}-\sqrt{\frac{2\mu}{r_2}-\frac{2\mu}{r_1+r_2}}\]
+\subsection*{Parabolic Transfer}
+For a parabolic transfer where the orbiting body escapes circular orbit at $r_1$ to infinity, and is then captured from infinity into orbit at $r_2$
+\[\Delta v_1 = (\sqrt{2}-1)\sqrt{\frac{\mu}{r_1}}\]
+\[\Delta v_2 = (\sqrt{2}-1)\sqrt{\frac{\mu}{r_2}}\]
+\subsection*{Single Impulse Manoeuvres}
+Raise apocentre:
+\[\Delta v = \sqrt{-\frac{\mu}{a_2}+\frac{2\mu}{r_p}}-\sqrt{-\frac{\mu}{a_1}+\frac{2\mu}{r_p}}\]
+Change inclination:
+\[\Delta v = \sqrt{v_1^2+v_2^2-2v_1v_2\cos i}\]
 \tabularnewline\hline
 \end{longtable}
 \end{document}
