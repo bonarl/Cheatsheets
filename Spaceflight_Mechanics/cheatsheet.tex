@@ -175,9 +175,29 @@ Rocket equation
 \[m_f = m_i e^{-\frac{\Delta v}{v_e}}\]
 \noindent\rule{9cm}{0.4pt}
 \section*{Aerobraking}
-\section*{Perturbations}
-\section*{N-Body Dynamics}
+\[D = \frac{1}{2}\rho C_D A v^2\]
+\[L = \frac{1}{2}\rho C_L Av^2\]
+Flight path angle $\gamma$ is measured to horizontal
+\[m\frac{dv}{dt} = -D-mg\sin \gamma\]
+\[mv\frac{d\gamma}{dt} = L - mg\cos \gamma\]
+Atmosphere density is exponential model, relative to a scale height $H$ and base density $\rho_0$
+\[\rho(h) = \rho_0\exp \left[-\frac{h}{H}\right]\]
+For aerocapture, assume gravity terms negligible
+\[\frac{1}{v}\frac{dv}{d\gamma} = -\frac{D}{L} = -\frac{C_D}{C_L}\]
+Integrate to get
+\[\ln \left(\frac{v_2}{v_1}\right) = -\frac{C_D}{C_L}(\gamma_2-\gamma_1)\]
+\[\Delta v = v_1\left( 1-\exp\left[ 2\frac{C_D}{C_L}\gamma_1\right]\right)\]
+\subsection*{Vertical Dynamics}
+\[\frac{dh}{dt} = v\sin \gamma = \frac{dh}{d\gamma}\frac{d\gamma}{dt} = \frac{dh}{d\gamma}\frac{L}{mv}\]
+Substituting for $L$ and using density function
+\[\frac{dh}{d\gamma} = \frac{2m\sin \gamma}{\rho_0 C_L A} \exp\left[\frac{h}{H}\right]\]
+&
+Integrate to find $h_{min}$
+\[\int_{h_1}^{h_{min}}\exp \left( -\frac{h}{H}\right) = \frac{2m}{\rho_0 C_L A}\int_{\gamma_1}^{0}\sin \gamma d \gamma\]
+Note that $h_1 >> H$ and so
+\[h_{min} = H\ln \left( \frac{\rho_0C_LAH}{2m(1-\cos \gamma_1)}\right)\]
 
+\noindent\rule{9cm}{0.4pt}
 \tabularnewline\hline
 \end{longtable}
 \end{document}
