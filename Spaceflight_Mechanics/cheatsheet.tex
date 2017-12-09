@@ -1,0 +1,76 @@
+\documentclass[table,cmyk]{article}
+\usepackage[a4paper,margin=0.5cm,portrait]{geometry}
+\usepackage{longtable,array,calc}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{braket}
+\makeatletter
+\newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
+\newcolumntype{A}[2]
+{
+        >{\begin{minipage}[t]{#2\linewidth-2\tabcolsep-#1\arrayrulewidth}%
+        \vspace{\tabcolsep}}%
+        c%
+        <{\vspace{\tabcolsep}\end{minipage}}%   
+}
+\makeatother
+
+\pagestyle{empty}
+
+\arrayrulewidth=1pt
+\tabcolsep=10pt
+\arrayrulecolor{blue}
+
+
+\begin{document}
+\begin{longtable}
+{
+    |A{1.5}{\ratio{50}{100}}% 30%
+    |A{1}{\ratio{50}{100}}% 30%
+    |%
+}\hline
+\section*{Dynamics}
+\subsection*{Relative Motion for Rotating Frame}
+\[\underline{v} = \frac{d \underline{r}}{d t} = \underline{v}_{o'} + \underline{v}_r + \underline{w} \times \underline{r}\]
+\[ \frac{d\underline{v}}{dt} = \underline{a}_r + 2\underline{\omega}\times\underline{v}_r + \frac{d\underline{\omega}}{dt}\times\underline{r}+\underline{a}_{o'}+\underline{\omega}\times(\underline{\omega}\times\underline{r})\]
+Polar Coordinates:
+\[\underline{v} = \dot{r}\underline{e}_r + r\dot{\theta}\underline{e}_{\theta}\]
+\[\underline{a} = (\ddot{r}-r\dot{\theta}^2)\underline{e}_r + (r\ddot{\theta} + 2\dot{r}\dot{\theta})\underline{e}_{\theta}\]
+Binet's Formula:
+
+For $\underline{a} \times \underline{r} = 0$ we have $a_{\theta} = 0 \implies r^2 \dot{\theta} = c$ which gives
+
+\[a_r = -\frac{c^2}{r^2}\left[\frac{d^2}{d\theta^2}\left(\frac{1}{r}\right)+\frac{1}{r}\right]\]
+
+\vspace{0.5cm}
+\noindent\rule{9cm}{0.4pt}
+\subsection*{Gravity}
+\[m\underline{a} = -\frac{GmM}{r^2}\underline{\hat{r}} = -\frac{m\mu}{r^2}\underline{\hat{r}}\]
+Total Mechanical Energy:
+\[E = \frac{1}{2}mv^2 - \frac{m\mu}{r}\]
+Angular Momentum:
+\[\underline{L} = \underline{r}\times m \underline{v} \]
+\[|\underline{L}| = mr^2\dot{\theta} \implies \text{conserved}\]
+
+\vspace{0.5cm}
+\noindent\rule{9cm}{0.4pt}
+\section*{Keplerian Motion}
+\subsection*{Two-Body Dynamics}
+Gravitational Forces:
+\[m_i\ddot{\underline{r}}_i=\pm \frac{Gm_im_j}{r^2}\underline{\hat{r}}\]
+Centre-of-Mass:
+\[\underline{r}_C = \frac{m_1\underline{r}_1 + m_2\underline{r}_2}{m_1+m_2}\]
+Sum of forces acting on centre of mass $= 0 \implies \underline{r}_C = \underline{r}_0 + \underline{r}'t$
+Approximate $\mu \approx Gm_1$ gives:
+\[\ddot{\underline{r}} = -\frac{\mu}{r^2}\underline{\hat{r}}\]
+Total energy is conserved, take $\ddot{\underline{r}}\cdot\underline{r}$ to prove $(d/dt) E = 0$, since:
+\[\frac{d}{dt}\left(\frac{1}{2}v^2\right) = \underline{\ddot{r}}\cdot\underline{\dot{r}} =  \frac{d}{dt}\left(\frac{G(m_1+m_2)}{r}\right)\]
+
+&
+\vspace{2cm}
+
+\noindent\rule{9cm}{0.4pt}
+\tabularnewline\hline
+
+\end{longtable}
+\end{document}
