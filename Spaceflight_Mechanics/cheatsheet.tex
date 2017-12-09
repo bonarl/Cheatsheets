@@ -68,7 +68,7 @@ Total energy is conserved, take $\ddot{\underline{r}}\cdot\underline{r}$ to prov
 &
 \subsection*{Equations of Motion}
 Use chain rule and $r^2\dot{\theta} = l$ to get:
-\[\frac{dr}{dt} = \frac{h}{r2}\frac{dr}{d\theta}\]
+\[\frac{dr}{dt} = \frac{l}{r^2}\frac{dr}{d\theta}\]
 
 Change variable to $u = 1/r$:
 \[\frac{d}{dt} = -h \frac{du}{d\theta}\]
@@ -95,7 +95,7 @@ so r describes an ellipse with semimajor axis $a$ and eccentricity $e$, pericent
 
 
 
-\vspace{2cm}
+\vspace{4cm}
 
 
 \tabularnewline\hline
@@ -156,7 +156,28 @@ For a parabolic transfer where the orbiting body escapes circular orbit at $r_1$
 Raise apocentre:
 \[\Delta v = \sqrt{-\frac{\mu}{a_2}+\frac{2\mu}{r_p}}-\sqrt{-\frac{\mu}{a_1}+\frac{2\mu}{r_p}}\]
 Change inclination:
-\[\Delta v = \sqrt{v_1^2+v_2^2-2v_1v_2\cos i}\]
+\[\Delta v = \sqrt{v_1^2+v_2^2-2v_1v_2\cos \Delta i}\]
+Multiple impulse manoeuvres can be used to reduce required delta v, by first raising apocentre and performing multiple burns.
+\subsection*{Patched Conic}
+In Earth-centred frame, velocity to escape is:
+\[\Delta v_{esc} = \sqrt{\frac{2\mu_{Earth}}{r_p}+v_{\infty,1}^2}-\sqrt{\frac{2\mu_{Earth}}{r_p}-\frac{\mu_{Earth}}{a_p}}\]
+\tabularnewline\hline
+In sun centre frame, $v_{\infty,1}$ must match the first $\Delta v$ for transfer. E.g. $\Delta v_1$ of Hohmann transfer, and similar for capture.
+\noindent\rule{9cm}{0.4pt}
+\section*{Rocket Equation}
+Specific impulse
+\[I_{sp} = \frac{F}{\dot{m}g_0}\]
+Effective exhaust velocity
+\[c=I_{sp}g_0\]
+Rocket equation
+\[(m-dm)dv = -dmv_e\]
+\[\Delta v = v_e \ln \frac{m_i}{m_f}\]
+\[m_f = m_i e^{-\frac{\Delta v}{v_e}}\]
+\noindent\rule{9cm}{0.4pt}
+\section*{Aerobraking}
+\section*{Perturbations}
+\section*{N-Body Dynamics}
+
 \tabularnewline\hline
 \end{longtable}
 \end{document}
