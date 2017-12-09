@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.27)  9 DEC 2017 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.27)  9 DEC 2017 12:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -197,8 +197,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen130
 \l_MT_below_shortintertext_sep=\dimen131
 )
-(/usr/share/texmf-dist/tex/latex/braket/braket.sty)
-No file cheatsheet.aux.
+(/usr/share/texmf-dist/tex/latex/braket/braket.sty) (./cheatsheet.aux)
 \openout1 = `cheatsheet.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
@@ -213,6 +212,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
 LaTeX Font Info:    ... okay on input line 25.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -277,38 +277,39 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \Gin@req@height=\dimen134
 \Gin@req@width=\dimen135
 )
-Overfull \hbox (0.5pt too wide) in alignment at lines 31--75
+Overfull \hbox (0.5pt too wide) in alignment at lines 31--103
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 75
+Underfull \vbox (badness 10000) detected at line 103
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./cheatsheet.aux) ) 
 Here is how much of TeX's memory you used:
- 3219 strings out of 492985
- 42520 string characters out of 6138637
- 128885 words of memory out of 5000000
- 6779 multiletter control sequences out of 15000+600000
- 5304 words of font info for 20 fonts, out of 8000000 for 9000
+ 3223 strings out of 492985
+ 42571 string characters out of 6138637
+ 137921 words of memory out of 5000000
+ 6780 multiletter control sequences out of 15000+600000
+ 5612 words of font info for 21 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,10n,35p,262b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy7.pfb>
-Output written on cheatsheet.pdf (1 page, 90754 bytes).
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on cheatsheet.pdf (1 page, 114848 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

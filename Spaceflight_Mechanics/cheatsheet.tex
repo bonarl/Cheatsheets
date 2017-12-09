@@ -65,8 +65,36 @@ Approximate $\mu \approx Gm_1$ gives:
 \[\ddot{\underline{r}} = -\frac{\mu}{r^2}\underline{\hat{r}}\]
 Total energy is conserved, take $\ddot{\underline{r}}\cdot\underline{r}$ to prove $(d/dt) E = 0$, since:
 \[\frac{d}{dt}\left(\frac{1}{2}v^2\right) = \underline{\ddot{r}}\cdot\underline{\dot{r}} =  \frac{d}{dt}\left(\frac{G(m_1+m_2)}{r}\right)\]
-
 &
+\subsubsection*{Equations of Motion}
+Use chain rule and $r^2\dot{\theta} = l$ to get:
+\[\frac{dr}{dt} = \frac{h}{r2}\frac{dr}{d\theta}\]
+
+Change variable to $u = 1/r$:
+\[\frac{d}{dt} = -h \frac{du}{d\theta}\]
+
+Gives:
+\[\frac{d^2r}{dt^2} = -h^2u^2\frac{d^2u}{d\theta^2}\text{\hspace{1cm}and\hspace{1cm}} -r\dot{\theta}^2 = -h^2u^3\]
+Equations of motion in polar coordinates are:
+\[\ddot{r} - r\dot{\theta}^2 = -\frac{\mu}{r^2}\text{\hspace{1cm}and\hspace{1cm}}r\ddot{\theta}+2\dot{r}\dot{\theta} = \frac{1}{r}\frac{d}{dt}(r^2\dot{\theta})=0\]
+Transforming for $u$:
+\[-l^2u^2\frac{d^2u}{d\theta^2}-l^2u^3 = -\mu u^2\]
+\[\frac{d^2u}{d\theta^2}+u = \frac{\mu}{l^2}\]
+Finally change to $z = u-\mu/l^2$ to get:
+\[\frac{d^2z}{d\theta^2}+z = 0 \implies z = A\cos(\theta-\theta_0)\]
+Which gives polar equation of conic section for $r$:
+\[r(\theta) = \frac{l^2/\mu}{1+\frac{Al^2}{\mu}\cos(\theta)}\]
+The energy equation is :
+\[E = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-U(r)\]
+Which can be solved by integrating w.r.t $r$, changing variable from $t$ to $\theta$, and substituting $U(r) = m\mu/r$. This gives:
+\[r = \frac{p}{\pm1+e\cos(\theta-\theta_0)}\]
+where
+\[p = \frac{c^2}{|\mu|}=a(1-e^2)\text{\hspace{1cm}and\hspace{1cm}}e = \sqrt{\frac{2Ec^2}{m\mu^2}+1}\]
+so r describes an ellipse with semimajor axis $a$ and eccentricity $e$, pericentre at $\theta=0$ and apocentre at $\theta=\pi$:
+\[r = \frac{a(1-e^2)}{1+e\cos(\theta-\theta_0)}\]
+
+
+
 \vspace{2cm}
 
 \noindent\rule{9cm}{0.4pt}
