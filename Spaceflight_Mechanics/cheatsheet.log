@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.27)  9 DEC 2017 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.27)  9 DEC 2017 13:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -277,39 +277,44 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \Gin@req@height=\dimen134
 \Gin@req@width=\dimen135
 )
-Overfull \hbox (0.5pt too wide) in alignment at lines 31--103
+Underfull \hbox (badness 10000) in paragraph at lines 112--116
+
+ []
+
+
+Overfull \hbox (0.5pt too wide) in alignment at lines 31--145
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 103
+Underfull \vbox (badness 10000) detected at line 145
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./cheatsheet.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./cheatsheet.aux) ) 
 Here is how much of TeX's memory you used:
- 3223 strings out of 492985
- 42571 string characters out of 6138637
- 137921 words of memory out of 5000000
- 6780 multiletter control sequences out of 15000+600000
- 5612 words of font info for 21 fonts, out of 8000000 for 9000
+ 3221 strings out of 492985
+ 42550 string characters out of 6138637
+ 150921 words of memory out of 5000000
+ 6779 multiletter control sequences out of 15000+600000
+ 5304 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,35p,262b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
-.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on cheatsheet.pdf (1 page, 114848 bytes).
+ 41i,10n,35p,262b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+</
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb>
+Output written on cheatsheet.pdf (2 pages, 112808 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

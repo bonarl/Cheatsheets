@@ -66,7 +66,7 @@ Approximate $\mu \approx Gm_1$ gives:
 Total energy is conserved, take $\ddot{\underline{r}}\cdot\underline{r}$ to prove $(d/dt) E = 0$, since:
 \[\frac{d}{dt}\left(\frac{1}{2}v^2\right) = \underline{\ddot{r}}\cdot\underline{\dot{r}} =  \frac{d}{dt}\left(\frac{G(m_1+m_2)}{r}\right)\]
 &
-\subsubsection*{Equations of Motion}
+\subsection*{Equations of Motion}
 Use chain rule and $r^2\dot{\theta} = l$ to get:
 \[\frac{dr}{dt} = \frac{h}{r2}\frac{dr}{d\theta}\]
 
@@ -97,8 +97,50 @@ so r describes an ellipse with semimajor axis $a$ and eccentricity $e$, pericent
 
 \vspace{2cm}
 
-\noindent\rule{9cm}{0.4pt}
-\tabularnewline\hline
 
+\tabularnewline\hline
+\section*{Orbital Parameters}
+\[a=\frac{r_p+r_a}{2}\text{\hspace{1cm}and\hspace{1cm}}e=\frac{r_a-r_p}{r_a+r_p}\]
+so
+\[r_p=a(1-e)\text{\hspace{1cm}and\hspace{1cm}}r_a=a(1+e)\]
+Comparing equations for $r$:
+\[l^2 = \mu a(1-e^2)\]
+\[v_p = \sqrt{\frac{\mu(1+e)}{a(1-e)}}\text{\hspace{1cm}and\hspace{1cm}}v_a = \sqrt{\frac{\mu(1-e)}{a(1+e)}}\]
+Conservation of energy:
+\[E = -\frac{\mu}{2a} \implies v^2 = \mu\left(\frac{2}{r}-\frac{1}{a}\right)\]
+\subsection*{Kepler's Laws}
+1st Law: Orbits are elliptical with attracting body at focus of ellipse
+\newline
+\newline
+2nd Law: Radial vector sweeps out equal areas in equal time
+
+\[\implies T = 2\pi\sqrt{\frac{a^3}{\mu}} \]
+
+3rd Law: Orbital period squared $\propto$ semi-major axis cubed:
+\subsection*{Kepler's Equation}
+Mean motion
+\[n=\sqrt{\frac{\mu}{a^3}}\]
+Mean anomoly
+\[M=n(t-\tau)\]
+Kepler's equation is
+\[M=E-e\sin E\]
+and use trig identity to get $\theta$ from $E$
+\[\tan \left(\frac{\theta}{2}\right) = \sqrt{\frac{1+e}{1-e}}\tan \left(\frac{E}{2}\right)\]
+This must be solved iteratively, start with guess $E_0 = M$, then find correction
+\[\Delta E = \frac{M-E_0+e\sin E_0}{1-e\cos E_0}\]
+Then repeat, using $E_i = E_{i-1}+\Delta E_{i-1}$ until $\Delta E_i \approx 0$
+&
+\subsection*{Position and Velocity from Orbital Elements}
+From orbit equation
+\[\dot{r} = \frac{a(1-e^2)}{(1+e\cos \theta)^2} e\sin \theta \dot{\theta} = r\frac{e\sin \theta}{1+e\cos \theta} \dot{\theta}\]
+Flight path angle
+\[\tan \gamma = \frac{v_r}{v_\theta}=\frac{\dot{r}}{r\dot{\theta}}=\frac{e\sin \theta}{1+e \cos \theta}\]
+To get in plane position and velocity at time $t$, solve Kepler's equation for $\tau$ time of passage from pericentre, then compute orbit radius and thus cartesian positions.
+\[x = r\cos \theta \text{\hspace{1cm}and\hspace{1cm}} y = r\sin \theta\]
+Velocity components:
+\[v_r = \frac{r^2e\sin \theta}{p}\dot{\theta}\text{\hspace{1cm}and\hspace{1cm}}v_\theta = \frac{l}{r} = r\dot{\theta}\]
+Gives cartesian velocities:
+\[\dot{x} = -\sqrt{\frac{\mu}{p}}\sin \theta \text{\hspace{1cm}and\hspace{1cm}}\dot{y} = \sqrt{\frac{\mu}{p}}(e+\cos \theta)\]
+\tabularnewline\hline
 \end{longtable}
 \end{document}
