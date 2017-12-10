@@ -1,9 +1,10 @@
-\documentclass[table,cmyk]{article}
+\documentclass[table,cmyk,fleqn]{article}
 \usepackage[a4paper,margin=0.5cm,portrait]{geometry}
 \usepackage{longtable,array,calc}
 \usepackage{xcolor}
 \usepackage{mathtools}
 \usepackage{braket}
+\usepackage{amsmath}
 \makeatletter
 \newcommand\ratio[2]{\strip@pt\dimexpr#1pt/#2\relax}
 \newcolumntype{A}[2]
@@ -23,12 +24,14 @@
 
 
 \begin{document}
+
 \begin{longtable}
 {
     |A{1.5}{\ratio{50}{100}}% 30%
     |A{1}{\ratio{50}{100}}% 30%
     |%
 }\hline
+
 \section*{Dynamics}
 \subsection*{Relative Motion for Rotating Frame}
 \[\underline{v} = \frac{d \underline{r}}{d t} = \underline{v}_{o'} + \underline{v}_r + \underline{w} \times \underline{r}\]
@@ -47,7 +50,7 @@ For $\underline{a} \times \underline{r} = 0$ we have $a_{\theta} = 0 \implies r^
 \subsection*{Gravity}
 \[m\underline{a} = -\frac{GmM}{r^2}\underline{\hat{r}} = -\frac{m\mu}{r^2}\underline{\hat{r}}\]
 Total Mechanical Energy:
-\[E = \frac{1}{2}mv^2 - \frac{m\mu}{r}\]
+\begin{boldmath}\[E = \frac{1}{2}mv^2 - \frac{m\mu}{r}\]\end{boldmath}
 Angular Momentum:
 \[\underline{L} = \underline{r}\times m \underline{v} \]
 \[|\underline{L}| = mr^2\dot{\theta} \implies \text{conserved}\]
@@ -62,7 +65,7 @@ Centre-of-Mass:
 \[\underline{r}_C = \frac{m_1\underline{r}_1 + m_2\underline{r}_2}{m_1+m_2}\]
 Sum of forces acting on centre of mass $= 0 \implies \underline{r}_C = \underline{r}_0 + \underline{r}'t$
 Approximate $\mu \approx Gm_1$ gives:
-\[\ddot{\underline{r}} = -\frac{\mu}{r^2}\underline{\hat{r}}\]
+\begin{boldmath}\[\ddot{\underline{r}} = -\frac{\mu}{r^2}\underline{\hat{r}}\]\end{boldmath}
 Total energy is conserved, take $\ddot{\underline{r}}\cdot\underline{r}$ to prove $(d/dt) E = 0$, since:
 \[\frac{d}{dt}\left(\frac{1}{2}v^2\right) = \underline{\ddot{r}}\cdot\underline{\dot{r}} =  \frac{d}{dt}\left(\frac{G(m_1+m_2)}{r}\right)\]
 &
@@ -74,9 +77,9 @@ Change variable to $u = 1/r$:
 \[\frac{dr}{dt} = -l \frac{du}{d\theta}\]
 
 Gives:
-\[\frac{d^2r}{dt^2} = -l^2u^2\frac{d^2u}{d\theta^2}\text{\hspace{1cm}and\hspace{1cm}} -r\dot{\theta}^2 = -l^2u^3\]
+\[\frac{d^2r}{dt^2} = -l^2u^2\frac{d^2u}{d\theta^2}\text{\hspace{0.6cm}and\hspace{0.6cm}} -r\dot{\theta}^2 = -l^2u^3\]
 Equations of motion in polar coordinates are:
-\[\ddot{r} - r\dot{\theta}^2 = -\frac{\mu}{r^2}\text{\hspace{1cm}and\hspace{1cm}}r\ddot{\theta}+2\dot{r}\dot{\theta} = \frac{1}{r}\frac{d}{dt}(r^2\dot{\theta})=0\]
+\[\ddot{r} - r\dot{\theta}^2 = -\frac{\mu}{r^2}\text{\hspace{0.6cm}and\hspace{0.6cm}}r\ddot{\theta}+2\dot{r}\dot{\theta} = \frac{1}{r}\frac{d}{dt}(r^2\dot{\theta})=0\]
 Transforming for $u$:
 \[-l^2u^2\frac{d^2u}{d\theta^2}-l^2u^3 = -\mu u^2\]
 \[\frac{d^2u}{d\theta^2}+u = \frac{\mu}{l^2}\]
@@ -85,11 +88,11 @@ Finally change to $z = u-\mu/l^2$ to get:
 Which gives polar equation of conic section for $r$:
 \[r(\theta) = \frac{l^2/\mu}{1+\frac{Al^2}{\mu}\cos(\theta)}\]
 The energy equation is :
-\[E = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-U(r)\]
+\begin{boldmath}\[E = \frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-U(r)\]\end{boldmath}
 Which can be solved by integrating w.r.t $r$, changing variable from $t$ to $\theta$, and substituting $U(r) = m\mu/r$. This gives:
 \[r = \frac{p}{\pm1+e\cos(\theta-\theta_0)}\]
 where
-\[p = \frac{c^2}{|\mu|}=a(1-e^2)\text{\hspace{1cm}and\hspace{1cm}}e = \sqrt{\frac{2Ec^2}{m\mu^2}+1}\]
+\begin{boldmath}\[p = \frac{c^2}{|\mu|}=a(1-e^2)\text{\hspace{0.6cm}and\hspace{0.6cm}}e = \sqrt{\frac{2Ec^2}{m\mu^2}+1}\]\end{boldmath}
 so r describes an ellipse with semimajor axis $a$ and eccentricity $e$, pericentre at $\theta=0$ and apocentre at $\theta=\pi$:
 \[r = \frac{a(1-e^2)}{1+e\cos(\theta-\theta_0)}\]
 
@@ -100,14 +103,14 @@ so r describes an ellipse with semimajor axis $a$ and eccentricity $e$, pericent
 
 \tabularnewline\hline
 \section*{Orbital Parameters}
-\[a=\frac{r_p+r_a}{2}\text{\hspace{1cm}and\hspace{1cm}}e=\frac{r_a-r_p}{r_a+r_p}\]
+\[a=\frac{r_p+r_a}{2}\text{\hspace{0.6cm}and\hspace{0.6cm}}e=\frac{r_a-r_p}{r_a+r_p}\]
 so
-\[r_p=a(1-e)\text{\hspace{1cm}and\hspace{1cm}}r_a=a(1+e)\]
+\[r_p=a(1-e)\text{\hspace{0.6cm}and\hspace{0.6cm}}r_a=a(1+e)\]
 Comparing equations for $r$:
-\[l^2 = \mu a(1-e^2)\]
-\[v_p = \sqrt{\frac{\mu(1+e)}{a(1-e)}}\text{\hspace{1cm}and\hspace{1cm}}v_a = \sqrt{\frac{\mu(1-e)}{a(1+e)}}\]
+\begin{boldmath}\[l^2 = \mu a(1-e^2)\]\end{boldmath}
+\[v_p = \sqrt{\frac{\mu(1+e)}{a(1-e)}}\text{\hspace{0.6cm}and\hspace{0.6cm}}v_a = \sqrt{\frac{\mu(1-e)}{a(1+e)}}\]
 Conservation of energy:
-\[E = -\frac{\mu}{2a} \implies v^2 = \mu\left(\frac{2}{r}-\frac{1}{a}\right)\]
+\begin{boldmath}\[E = -\frac{\mu}{2a} \implies v^2 = \mu\left(\frac{2}{r}-\frac{1}{a}\right)\]\end{boldmath}
 \subsection*{Kepler's Laws}
 1st Law: Orbits are elliptical with attracting body at focus of ellipse
 \newline
@@ -129,19 +132,20 @@ and use trig identity to get $\theta$ from $E$
 This must be solved iteratively, start with guess $E_0 = M$, then find correction
 \[\Delta E = \frac{M-E_0+e\sin E_0}{1-e\cos E_0}\]
 Then repeat, using $E_i = E_{i-1}+\Delta E_{i-1}$ until $\Delta E_i \approx 0$
-
+&
 \subsection*{Position and Velocity from Orbital Elements}
 From orbit equation
-\[\dot{r} = \frac{a(1-e^2)}{(1+e\cos \theta)^2} e\sin \theta \dot{\theta} = r\frac{e\sin \theta}{1+e\cos \theta} \dot{\theta}\]
+\begin{boldmath}\[\dot{r} = \frac{a(1-e^2)}{(1+e\cos \theta)^2} e\sin \theta \dot{\theta} = r\frac{e\sin \theta}{1+e\cos \theta} \dot{\theta}\]\end{boldmath}
+
 Flight path angle
 \[\tan \gamma = \frac{v_r}{v_\theta}=\frac{\dot{r}}{r\dot{\theta}}=\frac{e\sin \theta}{1+e \cos \theta}\]
-&
+
 To get in plane position and velocity at time $t$, solve Kepler's equation for $\tau$ time of passage from pericentre, then compute orbit radius and thus cartesian positions.
-\[x = r\cos \theta \text{\hspace{1cm}and\hspace{1cm}} y = r\sin \theta\]
+\[x = r\cos \theta \text{\hspace{0.6cm}and\hspace{0.6cm}} y = r\sin \theta\]
 Velocity components:
-\[v_r = \frac{r^2e\sin \theta}{p}\dot{\theta}\text{\hspace{1cm}and\hspace{1cm}}v_\theta = \frac{l}{r} = r\dot{\theta}\]
+\begin{boldmath}\[v_r = \frac{r^2e\sin \theta}{p}\dot{\theta}\text{\hspace{0.6cm}and\hspace{0.6cm}}v_\theta = \frac{l}{r} = r\dot{\theta}\]\end{boldmath}
 Gives cartesian velocities:
-\[\dot{x} = -\sqrt{\frac{\mu}{p}}\sin \theta \text{\hspace{1cm}and\hspace{1cm}}\dot{y} = \sqrt{\frac{\mu}{p}}(e+\cos \theta)\]
+\[\dot{x} = -\sqrt{\frac{\mu}{p}}\sin \theta \text{\hspace{0.6cm}and\hspace{0.6cm}}\dot{y} = \sqrt{\frac{\mu}{p}}(e+\cos \theta)\]
 \noindent\rule{9cm}{0.4pt}
 \section*{Orbit Transfers}
 \subsection*{Hohmann Transfer}
@@ -155,13 +159,17 @@ For a parabolic transfer where the orbiting body escapes circular orbit at $r_1$
 \subsection*{Single Impulse Manoeuvres}
 Raise apocentre:
 \[\Delta v = \sqrt{-\frac{\mu}{a_2}+\frac{2\mu}{r_p}}-\sqrt{-\frac{\mu}{a_1}+\frac{2\mu}{r_p}}\]
+\tabularnewline\hline
 Change inclination:
 \[\Delta v = \sqrt{v_1^2+v_2^2-2v_1v_2\cos \Delta i}\]
+If $v_1$ = $v_2$ then
+\[\Delta v = 2v\sin \left( \frac{\Delta i}{2}\right)\]
 Multiple impulse manoeuvres can be used to reduce required delta v, by first raising apocentre and performing multiple burns.
+
 \subsection*{Patched Conic}
 In Earth-centred frame, velocity to escape is:
 \[\Delta v_{esc} = \sqrt{\frac{2\mu_{Earth}}{r_p}+v_{\infty,1}^2}-\sqrt{\frac{2\mu_{Earth}}{r_p}-\frac{\mu_{Earth}}{a_p}}\]
-\tabularnewline\hline
+
 In sun centre frame, $v_{\infty,1}$ must match the first $\Delta v$ for transfer. E.g. $\Delta v_1$ of Hohmann transfer, and similar for capture.
 \noindent\rule{9cm}{0.4pt}
 \section*{Rocket Equation}
@@ -182,22 +190,108 @@ Flight path angle $\gamma$ is measured to horizontal
 \[mv\frac{d\gamma}{dt} = L - mg\cos \gamma\]
 Atmosphere density is exponential model, relative to a scale height $H$ and base density $\rho_0$
 \[\rho(h) = \rho_0\exp \left[-\frac{h}{H}\right]\]
+&
 For aerocapture, assume gravity terms negligible
 \[\frac{1}{v}\frac{dv}{d\gamma} = -\frac{D}{L} = -\frac{C_D}{C_L}\]
 Integrate to get
 \[\ln \left(\frac{v_2}{v_1}\right) = -\frac{C_D}{C_L}(\gamma_2-\gamma_1)\]
 \[\Delta v = v_1\left( 1-\exp\left[ 2\frac{C_D}{C_L}\gamma_1\right]\right)\]
+
 \subsection*{Vertical Dynamics}
 \[\frac{dh}{dt} = v\sin \gamma = \frac{dh}{d\gamma}\frac{d\gamma}{dt} = \frac{dh}{d\gamma}\frac{L}{mv}\]
 Substituting for $L$ and using density function
 \[\frac{dh}{d\gamma} = \frac{2m\sin \gamma}{\rho_0 C_L A} \exp\left[\frac{h}{H}\right]\]
-&
+
 Integrate to find $h_{min}$
 \[\int_{h_1}^{h_{min}}\exp \left( -\frac{h}{H}\right) = \frac{2m}{\rho_0 C_L A}\int_{\gamma_1}^{0}\sin \gamma d \gamma\]
 Note that $h_1 >> H$ and so
 \[h_{min} = H\ln \left( \frac{\rho_0C_LAH}{2m(1-\cos \gamma_1)}\right)\]
 
 \noindent\rule{9cm}{0.4pt}
+\section*{Important Things}
+\subsection*{1) Derive Orbital Energy}
+\subsubsection*{- Derive Energy for 2-Body Problem}
+\[E = T+V\]
+\[E = \frac{1}{2}m_1v^2 + V(r)\]
+\[\underline{F} = -\frac{m\mu}{r^2}\hat{\underline{r}} = -\underline{\nabla} V(r)\]
+\[\implies V(r) = -\frac{m\mu}{r}\]
+\[E = \frac{1}{2}mv^2 - \frac{m\mu}{r}\]
+
+\subsubsection*{- Demonstrate Energy Constant}
+Take time derivative of $1/2 v^2$
+\[\frac{d}{dt}\left( \frac{1}{2}\dot{\underline{r}}\cdot\dot{\underline{r}}\right) = \ddot{\underline{r}}\cdot \dot{\underline{r}}\]
+Take dot product of equation of motion with velocity vector
+\[\ddot{\underline{r}}\cdot\dot{\underline{r}}  -\frac{G(m_1+m_2)}{r^2}(\hat{\underline{r}}\cdot\dot{\underline{r}})\]
+\[\implies \frac{d}{dt}\left( \frac{1}{2}v^2\right) = -\frac{G(m_1+m_2)\dot{r}}{r^2} = \frac{d}{dt}\left(\frac{G(m_1+m_2)}{r}\right)\]
+\[\implies \frac{d}{dt}\left( \frac{1}{2}v^2 - \frac{G(m_1+m_2)}{r}\right) = 0\]
 \tabularnewline\hline
+This constant of motion is the energy
+\[E = \frac{1}{2}v^2-\frac{G(m_1+m_2)}{r}\]
+\subsection*{2) Energy from Orbit Geometry}
+\[ r = \frac{p}{\pm1+e\cos (\theta-\theta_0)}\]
+\[p = \frac{c^2}{\mu}=\frac{r^4\dot{\theta}^2}{\mu}=a(1-e^2)\text{\hspace{0.6cm}and\hspace{0.6cm}}e = \sqrt{\frac{2Ec^2}{m\mu^2}+1}\]
+
+\[a(1-e^2)=\frac{c^2}{\mu}=a\left( 1 - \frac{2Ec^2}{m\mu^2}+1\right)\]
+
+\[\implies E = -\frac{m\mu}{2a}\]
+\[E = \frac{-m\mu}{2a} = \frac{1}{2}mv^2-\frac{m\mu}{r}\]
+\[\implies v = \sqrt{\frac{2\mu}{r}-\frac{\mu}{a}}\]
+\subsection*{3) Demonstrate Angular Momentum is Constant}
+Definition of Angular Momentum
+\[\underline{L} = \underline{r} \times m\dot{\underline{r}}\]
+Take cross of position vector with equation of motion
+\[\underline{r} \times \underline{\ddot{r}} = -\frac{\mu}{r^2}(\underline{r}\times\underline{\hat{r}})=0\]
+Take time derivative of angular momentum
+\[\frac{d}{dt}(\underline{r}\times\underline{\dot{r}}) = \underline{\dot{r}}\times\underline{\dot{r}}+\underline{r}\times\underline{\ddot{r}}= 0\]
+$\implies$ Angular momentum conserved
+\subsection*{4) Kepler's Laws}
+\begin{enumerate}
+\item {Orbits are elliptical with attracting body at focus of ellipse}
+
+\item {Radial vector sweeps out equal areas in equal time}
+
+\item {Orbital period squared is $\propto$ semi-major axis cubed}
+\end{enumerate}
+\[T = 2\pi \sqrt{\frac{a^3}{\mu}}\]
+Mean motion
+\[n = \sqrt{\frac{\mu}{a^3}}\]
+\subsection*{5) Equation of Orbit}
+\[r = \frac{p}{1+e\cos \theta}\]
+\[p = \frac{c^2}{|\mu|}=a(1-e^2)\text{\hspace{0.6cm}and\hspace{0.6cm}}e = \sqrt{\frac{2Ec^2}{m\mu^2}+1}\]
+&
+\subsection*{6) Minimum Aerobraking Altitude}
+\[L = mv\frac{d\gamma}{dt}\text{\hspace{1cm}neglecting gravity}\]
+\[\rho(h) = \rho_0\exp \left[-\frac{h}{H}\right]\]
+\[\frac{dh}{dt} = v\sin \gamma = \frac{dh}{d\gamma}\frac{d\gamma}{dt} = \frac{dh}{d\gamma}\frac{L}{mv}\]
+Substituting for $L$ and using density function
+\[\frac{dh}{d\gamma} = \frac{2m\sin \gamma}{\rho_0 C_L A} \exp\left[\frac{h}{H}\right]\]
+
+Integrate to find $h_{min}$
+\[\int_{h_1}^{h_{min}}\exp \left( -\frac{h}{H}\right) = \frac{2m}{\rho_0 C_L A}\int_{\gamma_1}^{0}\sin \gamma d \gamma\]
+Note that $h_1 >> H$ and so
+\[h_{min} = H\ln \left( \frac{\rho_0C_LAH}{2m(1-\cos \gamma_1)}\right)\]
+\subsection*{7) Rocket Equation}
+Conservation of linear momentum, momentum gained by rocket = $-$momentum of exhaust gas
+\[(m-dm)dv = -dm v_e\]
+Note that $dmdv \approx 0$
+\[mdv = -v_edm\]
+\[\Delta v = c \ln \frac{mi}{mf}\]
+\[m_f = m_i e^{-\frac{\Delta v}{c}}\]
+Where $c$ is effective exhaust velocity
+\[c = I_{sp}g_0\]
+\subsection*{8) $\Delta$v Manoeuvres}
+Find difference between velocity of initial orbit and velocity of target orbit using
+\[v =\sqrt{\frac{2\mu}{r}-\frac{\mu}{a}}\]
+True for Hohmann, raising/lowering pericentre/apocentre, escapes etc.
+For change of orbital plane, consider geometry and change in angle of velocity vector. Change in inclination is out of plane burn, change of $\omega$ is radial burn
+
+In general
+\[\Delta v = \sqrt{v_1^2 + v_2^2 - 2v_1v_2\cos (\Delta \phi)}\]
+Where $\phi$ is the change in angle of the velocity vector. For $v_1 = v_2$
+\[\Delta v = 2v\sin \left( \frac{\Delta \phi}{2}\right)\]
+To find $\Delta \phi$ consider geometry, direction of burn, flight path angle etc.
+\tabularnewline\hline
+
+
 \end{longtable}
 \end{document}
